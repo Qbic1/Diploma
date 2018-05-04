@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import ru.diploma.eduCenter.forms.UserForm;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -27,12 +28,10 @@ public class User {
     private String lastName;
     @NotNull
     private LocalDate birth;
-    @NotNull
-    private String email;
     private String city;
     private String phoneNumber;
     @NotNull
-    private String login;
+    private String email;
     @NotNull
     private String hashPassword;
 
@@ -42,13 +41,11 @@ public class User {
     private State state;
 
     @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "course_student" ,
+    @JoinTable(name = "course_student",
             joinColumns = @JoinColumn(name = "student_id"),
             inverseJoinColumns = @JoinColumn(name = "course_id"))
     private List<Course> courses;
 
     @OneToOne(mappedBy = "user")
     private Teacher teacher;
-
-    //builder
 }
