@@ -41,12 +41,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     .antMatchers("/signUp/**").permitAll()
 //                    .antMatchers("/css/**").permitAll()
                     .antMatchers("/").authenticated()
-                    .and()
+                .and()
                 .formLogin()
                     .usernameParameter("email")
                     .defaultSuccessUrl("/")
                     .loginPage("/login")
-                    .permitAll();
+                    .permitAll()
+                .and()
+                .rememberMe()
+                    .rememberMeParameter("remember-me")
+                    .tokenRepository(tokenRepository());
         http.csrf().disable();
     }
 

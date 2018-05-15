@@ -6,6 +6,8 @@ import lombok.Data;
 import ru.diploma.eduCenter.models.News;
 
 import java.time.LocalDate;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Data
 @AllArgsConstructor
@@ -21,5 +23,9 @@ public class NewsDto {
                 .description(news.getDescription())
                 .date(news.getDate())
                 .build();
+    }
+
+    public static List<NewsDto> from(List<News> news) {
+        return news.stream().map(NewsDto::from).collect(Collectors.toList());
     }
 }

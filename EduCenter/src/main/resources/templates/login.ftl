@@ -43,9 +43,12 @@
                 <input type="password" name="password" required autocomplete="off"/>
             </div>
 
-            <!--<label for="remember-me">
-                <input type="checkbox" id="remember-me" name="remember-me">Remember
-            </label>-->
+            <div class="field-wrap">
+                <label for="remember-me">
+                    <input type="checkbox" id="remember-me" name="remember-me" style="height: 20px">Remember
+                </label>
+
+            </div>
 
             <h1 class="signUp"><a href="/signUp">Sign Up</a></h1>
 

@@ -7,6 +7,8 @@ import ru.diploma.eduCenter.models.Course;
 import ru.diploma.eduCenter.models.Status;
 
 import java.time.LocalDate;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Data
 @AllArgsConstructor
@@ -26,5 +28,10 @@ public class CourseDto {
                 .dateFinish(course.getDateFinish())
                 .status(course.getStatus())
                 .build();
+    }
+
+    public static List<CourseDto> from(List<Course> courses)
+    {
+        return courses.stream().map(CourseDto::from).collect(Collectors.toList());
     }
 }
