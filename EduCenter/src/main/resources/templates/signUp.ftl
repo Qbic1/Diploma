@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<#import "/spring.ftl" as spring />
 <head>
     <meta charset="UTF-8">
     <title>Sign-Up/Login Form</title>
@@ -18,6 +18,7 @@
     <div id="sign-up">
         <h1>Sign Up</h1>
 
+        <@spring.bind "userForm"/>
         <form action="/signUp" method="post">
 
             <div class="top-row">
@@ -25,14 +26,18 @@
                     <label for="first-name">
                         First Name<span class="req">*</span>
                     </label>
-                    <input type="text" required autocomplete="off" id="first-name" name="firstName"/>
+                    <!--input type="text" required autocomplete="off" id="first-name" name="firstName"/!-->
+                    <@spring.formInput "userForm.firstName"/>
+                    <@spring.showErrors "<br>"/>
                 </div>
 
                 <div class="field-wrap">
                     <label for="last-name">
                         Last Name<span class="req">*</span>
                     </label>
-                    <input type="text" required autocomplete="off" id="last-name" name="lastName"/>
+                    <!--input type="text" required autocomplete="off" id="last-name" name="lastName"/!-->
+                    <@spring.formInput "userForm.lastName"/>
+                    <@spring.showErrors "<br>"/>
                 </div>
             </div>
 
@@ -40,7 +45,9 @@
                 <label for="birth" class="active">
                     Birth<span class="req">*</span>
                 </label>
-                <input type="date" required autocomplete="off" id="birth" name="birth"/>
+                <!--input type="date" required autocomplete="off" id="birth" name="birth"/!-->
+                <@spring.formInput "userForm.birth"/>
+                <@spring.showErrors "<br>"/>
             </div>
 
             <div class="top-row">
@@ -48,14 +55,18 @@
                     <label for="city">
                         City
                     </label>
-                    <input type="text" required autocomplete="off" id="city" name="city"/>
+                    <!--input type="text" autocomplete="off" id="city" name="city"/!-->
+                    <@spring.formInput "userForm.city"/>
+                    <@spring.showErrors "<br>"/>
                 </div>
 
                 <div class="field-wrap">
                     <label for="phone-number">
                         Phone number
                     </label>
-                    <input type="text" required autocomplete="off" id="phone-number" name="phoneNumber"/>
+                    <!--input type="text" autocomplete="off" id="phone-number" name="phoneNumber"/!-->
+                    <@spring.formInput "userForm.phoneNumber"/>
+                    <@spring.showErrors "<br>"/>
                 </div>
             </div>
 
@@ -63,14 +74,18 @@
                 <label for="email">
                     Email Address<span class="req">*</span>
                 </label>
-                <input type="email" required autocomplete="off" id="email" name="email"/>
+                <!--input type="email" required autocomplete="off" id="email" name="email"/!-->
+                <@spring.formInput "userForm.email"/>
+                <@spring.showErrors "<br>"/>
             </div>
 
             <div class="field-wrap">
                 <label for="password">
                     Set A Password<span class="req">*</span>
                 </label>
-                <input type="password" required autocomplete="off" id="password" name="password"/>
+                <!--input type="password" required autocomplete="off" id="password" name="password"/!-->
+                <@spring.formPasswordInput "userForm.password"/>
+                <@spring.showErrors "<br>"/>
             </div>
 
             <button type="submit" class="button button-block" value="Sign Up"/>

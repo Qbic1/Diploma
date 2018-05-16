@@ -20,12 +20,7 @@ public class News {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
     private String title;
-
-    @NotNull
     private String description;
-
-    @NotNull
     private LocalDate date;
 }

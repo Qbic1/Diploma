@@ -17,11 +17,6 @@ public class CourseStudent {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
     private Long course_id;
-
-    @NotNull
     private Long student_id;
-
-
 }

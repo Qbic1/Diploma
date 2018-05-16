@@ -21,15 +21,10 @@ public class Course {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
     private String title;
-    @NotNull
     private String description;
-    @NotNull
     private LocalDate dateStart;
-    @NotNull
     private LocalDate dateFinish;
-    @NotNull
     @Enumerated(value = EnumType.STRING)
     private Status status;
 

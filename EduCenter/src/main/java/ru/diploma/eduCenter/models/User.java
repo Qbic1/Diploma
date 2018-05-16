@@ -4,10 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import ru.diploma.eduCenter.forms.UserForm;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -22,17 +20,12 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
     private String firstName;
-    @NotNull
     private String lastName;
-    @NotNull
     private LocalDate birth;
     private String city;
     private String phoneNumber;
-    @NotNull
     private String email;
-    @NotNull
     private String hashPassword;
 
     @Enumerated(value = EnumType.STRING)
