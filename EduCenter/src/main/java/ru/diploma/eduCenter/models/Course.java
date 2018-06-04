@@ -25,6 +25,8 @@ public class Course {
     private String description;
     private LocalDate dateStart;
     private LocalDate dateFinish;
+    private String subject;
+
     @Enumerated(value = EnumType.STRING)
     private Status status;
 

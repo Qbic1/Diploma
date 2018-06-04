@@ -45,9 +45,8 @@
 
             <div class="field-wrap">
                 <label for="remember-me">
-                    <input type="checkbox" id="remember-me" name="remember-me" style="height: 20px">Remember
-                </label>
-
+                    <input type="checkbox" id="remember-me" name="remember-me" style="height: 20px" checked>
+                    Remember</label>
             </div>
 
             <h1 class="signUp"><a href="/signUp">Sign Up</a></h1>

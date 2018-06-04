@@ -25,4 +25,6 @@ public class CoursesPageController {
         coursesPageService.addCourse(courseForm);
         return "redirect:/courses";
     }
+
+
 }

@@ -13,6 +13,13 @@
 
 <body>
 
+<#if error??>
+<div class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    Email already exists!
+</div>
+</#if>
+
 <div class="form">
 
     <div id="sign-up">
@@ -45,9 +52,9 @@
                 <label for="birth" class="active">
                     Birth<span class="req">*</span>
                 </label>
-                <!--input type="date" required autocomplete="off" id="birth" name="birth"/!-->
-                <@spring.formInput "userForm.birth"/>
-                <@spring.showErrors "<br>"/>
+                <input type="date" required autocomplete="off" id="birth" name="birth"/>
+                <!--@spring.formInput "userForm.birth"/!-->
+                <!--@spring.showErrors "<br>"/!-->
             </div>
 
             <div class="top-row">
