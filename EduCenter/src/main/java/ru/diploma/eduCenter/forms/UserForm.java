@@ -15,7 +15,6 @@ public class UserForm {
     @Size(min = 2, max = 50, message = "Last name must contains between 2 and 50 characters")
     private String lastName;
     @NotNull(message = "Birth date must be set")
-    //@Past(message = "Wrong date")
     private String birth;
     @Size(min = 2, max = 50, message = "City must contains between 2 and 50 characters")
     private String city;

@@ -6,6 +6,13 @@
 
 <body>
 
+<#if added??>
+<div class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    You enroll for a course!
+</div>
+</#if>
+
 <#list courses as course>
 <div>
     <b style="font-size: 20px">${course.title}</b>
@@ -30,6 +37,7 @@
     <label>Status</label>
     ${course.status}
 </div>
+<a href="/courses/${course.title}">Enroll</a>
 <hr>
 </#list>
 

@@ -36,6 +36,10 @@ ${client.city}
 ${client.phoneNumber}
 </div>
 <hr>
+<a href="/mycourses"><input type="submit" value="Your courses"></a>
+
+<a href="/settings"><input type="submit" value="Edit"></a>
+<a href="/delete"><input type="submit" value="Delete profile"></a>
 
 </body>
 </html>
